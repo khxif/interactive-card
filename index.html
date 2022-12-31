@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="left" >
+      <div class="card-front">
+        <div class="circles">
+        <div class="white-circle"></div>
+        <div class="transparent-circle"></div>
+        </div>
+        <h1 class="cardnum-display" > 0000 0000 0000 0000</h1>
+        <div class="details">
+          <p class="cardname-display">Jane Appleseed</p>
+          <p class="cardexpiry-display">00/00</p>
+        </div>
+      </div>
+      <div class="card-back">
+        <h4 class="cvc-display">000</h4>
+      </div>
+    </div>
+    <div class="right" >
+      <div class="form">
+        <form class="card-form" >
+          <div class="name">
+            <label for=""> Cardholder Name</label> <br>
+            <input type="text" class="long-input input" placeholder=" e.g. Jane Appleseed" oninput="inputValue()" required>
+          </div>
+          <div class="number">
+            <label for="">Card Number</label> <br>
+            <input type="tel" class="long-input  input" placeholder=" e.g. 1234 5678 9123 0000" oninput="inputValue()" required>
+            <p class="error">Error</p>
+          </div>
+          <div class="flex">
+            <div class="date">
+              <label for="">Exp. Date (MM/YY)</label> <br>
+              <input type="tel" placeholder="MM" class="small-input  input" oninput="inputValue()" required>
+              <input type="tel" placeholder="YY" class="small-input  input" oninput="inputValue()" required>
+              <p class="error">Errror</p>
+            </div>
+            <div class="cvc">
+              <label for="">CVC</label> <br>
+              <input type="tel" placeholder="e.g. 123" class="medium-input  input" oninput="inputValue()" required>
+            </div>
+          </div>
+          <button type="submit" class="btn">Confirm</button>
+        </form>
+      </div>
+      <div class="confirm">
+        <img src="./images/icon-complete.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button class="btn continue-btn" type="reset" >Continue</button>
+      </div>
+    </div>
+  </main> 
+
+  <!-- Completed state start -->
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
